@@ -2,7 +2,7 @@ import requests
 import os
 from requests.auth import HTTPBasicAuth
 
-class Clint():
+class Client():
     def __init__(self, account, password, file_name, download_path):
         self.account = account
         self.paasword = password
@@ -26,5 +26,5 @@ if __name__ == "__main__":
     PASSWORD = '123'
     FILENAME = 'tests.xlsx'
     DOWNLOADPATH = './downloaded/'
-    clint = Clint(ACCOUNT, PASSWORD, FILENAME, DOWNLOADPATH)
-    clint.download()
+    Client = Client(ACCOUNT, PASSWORD, FILENAME, DOWNLOADPATH)
+    Client.download()
