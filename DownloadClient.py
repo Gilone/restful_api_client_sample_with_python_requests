@@ -14,7 +14,7 @@ class Client():
             os.mkdir(path)
 
     def download(self):
-        url = 'http://10.141.124.235/helloweb/download/' + self.file_name
+        url = 'http://10.141.124.235:8800/helloweb/download/' + self.file_name
         self._make_dir(self.download_path)
         resp = requests.get(url,auth=HTTPBasicAuth(self.account,self.paasword))
         with open(self.download_path+self.file_name,"wb") as download_file:
@@ -24,7 +24,7 @@ class Client():
 if __name__ == "__main__":
     ACCOUNT = 'usr'
     PASSWORD = '123'
-    FILENAME = 'tests.xlsx'
+    FILENAME = 'tests.docx'
     DOWNLOADPATH = './downloaded/'
     Client = Client(ACCOUNT, PASSWORD, FILENAME, DOWNLOADPATH)
     Client.download()
