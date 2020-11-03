@@ -28,7 +28,7 @@ class Client():
 
 
 if __name__ == "__main__":
-    API_URL = 'http://10.141.124.235:8800/helloweb/api/'
+    API_URL = 'http://x.x.x.x:8800/helloweb/api/'
     TOKEN = 'admin'
     FILENAME = 'tests.docx'
     DOWNLOADPATH = './downloaded/'
